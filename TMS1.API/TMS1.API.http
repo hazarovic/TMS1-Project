@@ -1,0 +1,7 @@
+@WebApplication1_HostAddress =https://localhost:7282 
+//http://localhost:5136
+
+GET {{WebApplication1_HostAddress}}/login /
+Accept: application/json
+
+###https://localhost:7282/

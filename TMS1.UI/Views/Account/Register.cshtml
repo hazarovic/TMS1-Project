@@ -1,0 +1,75 @@
+﻿@model TMS1.UI.Models.AccountViewModel.RegisterViewModel
+
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Register - Team Management System</title>
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <a href="c:\users\unkno\source\repos\tms1\tms1.ui\views\account\register.cshtml">c:\users\unkno\source\repos\tms1\tms1.ui\views\account\register.cshtml</a>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700">
+    <link rel="stylesheet" href="~/assets/css/Hero-Carousel-images.css">
+    <link rel="stylesheet" href="~/assets/css/Navbar-Right-Links-Dark-icons.css">
+    <link rel="stylesheet" href="~/assets/css/User-Tasks-and-User-Activity-Streams---List-Group-Component.css">
+</head>
+
+<body class="bg-gradient-primary">
+    <div class="container">
+        <div class="card shadow-lg o-hidden border-0 my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-flex">
+                        <img src="~/assets/img/dogs/pexels-anniroenkae-3418400.jpg" style="width: 430px;">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h4 class="text-dark mb-4">Create an Account!</h4>
+                            </div>
+                            @if (Model != null && !string.IsNullOrEmpty(Model.ErrorMessage))
+
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    @Model.ErrorMessage
+                                </div>
+                            }
+                            <form class="user" asp-action="Register" asp-controller="Account" method="post">
+                                <div class="mb-3">
+                                    <input class="form-control form-control-user" type="text" id="exampleInputUsername" aria-describedby="usernameHelp" placeholder="Username" name="Username" value="@Model?.Username">
+                                    <span asp-validation-for="Username" class="text-danger"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address" name="Email" value="@Model?.Email">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input class="form-control form-control-user" type="password" id="examplePasswordInput" placeholder="Password" name="Password">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    @* <div class="col-sm-6">
+                                        <input class="form-control form-control-user" type="password" id="exampleRepeatPasswordInput" placeholder="Repeat Password" name="ConfirmPassword">
+                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                     </div> *@
+                                </div>
+                                <button class="btn btn-primary d-block btn-user w-100" type="submit">Register Account</button>
+                                <hr>
+                            </form>
+                            <div class="text-center"><a class="small" href="forgot-password.html">Forgot Password?</a></div>
+                            <div class="text-center"><a class="small" href="/Account/Login">Already have an account? Login!</a></div>
+                            <div class="text-center"><a class="small" href="/Home/Index"><strong>Back to Homepage</strong></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/bs-init.js"></script>
+    <script src="~/assets/js/theme.js"></script>
+</body>
+
+</html>

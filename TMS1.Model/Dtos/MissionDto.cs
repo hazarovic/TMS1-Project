@@ -1,0 +1,17 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TMS1.Model.Dtos
+{
+    public class MissionDto
+    {
+        public int MissionId { get; set; }
+        [Required(ErrorMessage = "Please Enter Title")]
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public DateTime DueDate { get; set; }
+        public int Status { get; set; }
+        public int Priority { get; set; }
+        public int UserId { get; set; }
+        //public string Username { get; set; } 
+    }
+}
