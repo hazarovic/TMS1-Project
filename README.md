@@ -12,7 +12,7 @@ TMS1-Project is a task management system that provides user authentication and m
 ## Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/TMS1-Project.git
+   git clone https://github.com/hazarovic/TMS1-Project.git
    ```
 2. Navigate to the project directory:
    ```bash
